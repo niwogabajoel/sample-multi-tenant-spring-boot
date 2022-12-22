@@ -1,0 +1,17 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: MultiTenant
+  datasource:
+    url: 'jdbc:postgresql://localhost:5432/farmosdatabase?ApplicationName=MultiTenant'
+    username: postgres
+    password: postgres
+  jpa:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  main:
+    allow-circular-references: true
